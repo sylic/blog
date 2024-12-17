@@ -1,0 +1,17 @@
+html,body,#nuxt-root{
+  height: 100%;
+  width: 100%;
+}
+// 隐藏滚动条
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-sb{
+  align-items: center;
+  justify-content: center;
+}
