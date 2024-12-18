@@ -1,7 +1,7 @@
-header{
-  --wrap-height:100px;
-  
+header {
+  --wrap-height: 100px;
+  --icon-color: #444444;
 }
-#__nuxt{
-  --sider-width:15%;
+#__nuxt {
+  --sider-width: 15%;
 }

@@ -1,10 +1,17 @@
 html,body,#nuxt-root{
   height: 100%;
   width: 100%;
+  font-family: 'Inter', sans-serif;
+
 }
 // 隐藏滚动条
 ::-webkit-scrollbar {
   width: 6px;
+}
+.header-icon-class{
+  background-color: var(--icon-color);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
 }
 
 .flex-row{
@@ -13,5 +20,8 @@ html,body,#nuxt-root{
 }
 .flex-sb{
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+.marin-r-10{
+  margin-right: 20px;
 }

@@ -10,10 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/fonts": "^0.10.3",
     "nuxt": "^3.14.1592",
     "sass": "^1.83.0",
     "vue": "latest",
     "vue-router": "latest"
   },
-  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447",
+  "devDependencies": {
+    "@iconify-json/proicons": "^1.2.11",
+    "@nuxt/icon": "^1.10.2"
+  }
 }
