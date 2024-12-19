@@ -7,6 +7,17 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxtjs/color-mode'
   ],
+  app: {
+    head: {
+      title: 'LiLiStar',
+      meta: [
+        { name: 'description', content: 'LiLiStar\'s HomePage' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/icon.svg' }
+      ]
+    }
+  },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found

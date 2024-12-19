@@ -1,11 +1,11 @@
 <template>
-  <div class="home-layout">
-    <header class="p-2em">
+  <div class="home-layout flex-col">
+    <header class="p-2em header-wrapper">
       <Header></Header>
     </header>
-    <aside></aside>
-    <main class="flex-1 px-7 py-10 w-100%">
-      <div class="max-w-70ch m-auto">
+    <main class="content-wrapper flex-row">
+      <div class="block"></div>
+      <div class="list-wrapper">
         <slot />
       </div>
     </main>
@@ -14,3 +14,24 @@
 <script lang="ts" setup>
 import Header from './components/Header';
 </script>
+<style lang="scss" scoped>
+.home-layout {
+  height: 100%;
+}
+.header-wrapper {
+  height: var(--wrap-height);
+}
+.content-wrapper {
+  flex: 1;
+  width: 100%;
+  .block {
+    height: 100%;
+    width: var(--sider-width);
+  }
+  .list-wrapper {
+    height: 100%;
+    width: calc(100% - var(--sider-width) * 2);
+    // border-left: 1px dashed grey;
+  }
+}
+</style>
