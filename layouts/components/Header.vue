@@ -7,17 +7,17 @@
       </div>
       <div class="outer-links flex-row">
         <ChangeTheme />
-        <NuxtLink
+        <!-- a 标签访问过后颜色会变为链接颜色 -->
+        <div
           v-for="link in outerLinks"
-          :key="link.path"
+          :key="link.herf"
           class="hover marin-r-10"
           :title="link.title"
-          :to="link.herf"
-          target="_blank"
+          @click="handleLinkClick(link.herf)"
         >
           <span class="hidden md:inline">{{ link.title }}</span>
           <component :is="link.icon" />
-        </NuxtLink>
+        </div>
       </div>
     </div>
     <div class="block"></div>
@@ -28,6 +28,10 @@
 import {} from 'vue';
 import { authorInfo, outerLinks } from '@/config';
 import { Icon } from '#components';
+
+const handleLinkClick = (path: string) => {
+  window.open(path);
+};
 </script>
 
 <style lang="scss">

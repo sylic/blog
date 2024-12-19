@@ -1,10 +1,9 @@
-
+@import "./theme.css";
 // 隐藏滚动条
 ::-webkit-scrollbar {
   width: 6px;
 }
 .header-icon-class{
-  background-color: var(--icon-color);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3em;
   font-size: var(--icon-size);
@@ -23,4 +22,17 @@
 }
 .marin-r-10{
   margin-right: 20px;
+}
+html{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.home-layout{
+  height: 100%;
+  width: 100%;
+}
+.dark-mode body {
+  background-color: #091a28;
+  color: #ebf4f1;
 }
