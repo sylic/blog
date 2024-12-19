@@ -7,11 +7,10 @@ export default defineNuxtConfig({
     '@nuxt/icon'
   ],
   css: [
-    '@/assets/style/global.scss',
     '@/assets/style/theme.css',
+    '@/assets/style/global.scss',
   ],
   icon: {
-    size: '24px',
     class: 'icon',
     mode: 'css',
   },

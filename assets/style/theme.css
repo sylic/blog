@@ -1,7 +1,44 @@
 header {
   --wrap-height: 100px;
   --icon-color: #444444;
+  --icon-size: 24px;
 }
 #__nuxt {
   --sider-width: 15%;
+}
+// 声明主题色变量
+:root {
+  --bg-color-light: #f5f5f5;
+  --bg-color-dark: #333333;
+  --text-color-light: #333333;
+  --text-color-dark: #f5f5f5;
+}
+:root {
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+}
+//给Body加自定义属性theme-mode- 黑暗模式下
+:root body[theme-mode='dark'] {
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+}
+// 浅色模式
+:root body[theme-mode='light'] {
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+  }
 }

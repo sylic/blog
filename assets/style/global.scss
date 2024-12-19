@@ -1,9 +1,4 @@
-html,body,#nuxt-root{
-  height: 100%;
-  width: 100%;
-  font-family: 'Inter', sans-serif;
 
-}
 // 隐藏滚动条
 ::-webkit-scrollbar {
   width: 6px;
@@ -12,6 +7,10 @@ html,body,#nuxt-root{
   background-color: var(--icon-color);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3em;
+  font-size: var(--icon-size);
+}
+.hover{
+  cursor: pointer;
 }
 
 .flex-row{

@@ -7,6 +7,11 @@ export const authorInfo = {
   lang: 'zh-CN',
   title: "LiLiStar's HomePage",
 }
+// 主题色配置
+export const systemConfig = {
+  theme: ["light", "dark"],
+  themeModeAttr: "theme-mode"
+}
 // 外链配置
 export const outerLinks = [
   {
