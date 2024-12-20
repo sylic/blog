@@ -1,12 +1,19 @@
 header {
   --wrap-height: 100px;
-  --icon-color: #444444;
-  --icon-size: 26px;
 }
 #__nuxt {
   --sider-width: 15%;
   width: 100%;
   height: 100%;
+  /* --tab-card-width:200px; */
+  --tab-card-height:30px;
+  --base-raduis:8px;
+  --icon-color: #444444;
+  --icon-size: 26px;
+}
+
+.content-part {
+  --pagenation-height:40px;
 }
 // 声明主题色变量
 :root {

@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode'
   ],
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: 'LiLiStar',
       meta: [
@@ -31,5 +32,11 @@ export default defineNuxtConfig({
   css: [
     '~/assets/style/theme.css',
     '~/assets/style/global.scss',
+  ],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
   ],
 })

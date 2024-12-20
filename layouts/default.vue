@@ -31,6 +31,7 @@ import Header from './components/Header';
   .list-wrapper {
     height: 100%;
     width: calc(100% - var(--sider-width) * 2);
+    position: relative;
     // border-left: 1px dashed grey;
   }
 }

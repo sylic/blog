@@ -6,7 +6,6 @@
 
 <script setup>
 import { ref, h } from 'vue';
-import { systemConfig } from '@/config';
 import { Icon } from '#components';
 const colorMode = useColorMode();
 const moon = h(Icon, { name: 'proicons:moon', class: 'header-icon-class' });

@@ -25,3 +25,23 @@ export const outerLinks = [
     icon: h(Icon, { name: "proicons:sparkle", class: 'header-icon-class' })
   }
 ]
+// 主页tab配置
+export const homePageTabs = [
+  {
+    title: "Me",
+    icon: h(Icon, { name: 'proicons:coffee-hot', class: 'header-icon-class' }),
+    componentName: 'Me'
+  },
+  {
+    title: "Notes",
+    icon: h(Icon, { name: 'proicons:draw-text', class: 'header-icon-class' })
+  },
+  {
+    title: "Summary",
+    icon: h(Icon, { name: 'proicons:emoji-laughter', class: 'header-icon-class' })
+  },
+  {
+    title: "Tools",
+    icon: h(Icon, { name: 'proicons:calculator', class: 'header-icon-class' })
+  },
+]
