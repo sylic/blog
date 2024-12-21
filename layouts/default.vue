@@ -6,13 +6,14 @@
     <main class="content-wrapper flex-row">
       <div class="block"></div>
       <div class="list-wrapper">
-        <slot />
+        <MianContent></MianContent>
       </div>
     </main>
   </div>
 </template>
 <script lang="ts" setup>
 import Header from './components/Header';
+import MianContent from './components/MianContent';
 </script>
 <style lang="scss" scoped>
 .home-layout {

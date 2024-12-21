@@ -2,11 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-12-16',
   devtools: { enabled: false },
-  modules: [
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@nuxtjs/color-mode'
-  ],
+  modules: ['@nuxt/fonts', '@nuxt/icon', '@nuxtjs/color-mode', '@nuxt/content'],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
@@ -33,6 +29,24 @@ export default defineNuxtConfig({
     '~/assets/style/theme.css',
     '~/assets/style/global.scss',
   ],
+  content: {
+    highlight: {
+      theme: {
+        // Default theme (same as single string)
+        default: 'vitesse-light',
+        // Theme used if `html.dark`
+        dark: 'vitesse-dark',
+        // Theme used if `html.sepia`
+        sepia: 'monokai',
+      },
+      preload: [
+        'c',
+        'cpp',
+        'java',
+      ],
+
+    },
+  },
   components: [
     {
       path: '~/components',

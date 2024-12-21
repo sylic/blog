@@ -30,18 +30,25 @@ export const homePageTabs = [
   {
     title: "Me",
     icon: h(Icon, { name: 'proicons:coffee-hot', class: 'header-icon-class' }),
-    componentName: 'Me'
+    path: '/',
+    showPagenation: false
   },
   {
     title: "Notes",
-    icon: h(Icon, { name: 'proicons:draw-text', class: 'header-icon-class' })
+    icon: h(Icon, { name: 'proicons:draw-text', class: 'header-icon-class' }),
+    path: '/notes',
+    showPagenation: true
   },
   {
     title: "Summary",
-    icon: h(Icon, { name: 'proicons:emoji-laughter', class: 'header-icon-class' })
+    icon: h(Icon, { name: 'proicons:emoji-laughter', class: 'header-icon-class' }),
+    path: '/summary',
+    showPagenation: true
   },
   {
     title: "Tools",
-    icon: h(Icon, { name: 'proicons:calculator', class: 'header-icon-class' })
+    icon: h(Icon, { name: 'proicons:calculator', class: 'header-icon-class' }),
+    path: '/tools',
+    showPagenation: false
   },
 ]
