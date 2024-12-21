@@ -30,12 +30,13 @@ export default defineNuxtConfig({
     '~/assets/style/global.scss',
   ],
   content: {
+    respectPathCase: true, // Use the same path case as the file system
     highlight: {
       theme: {
         // Default theme (same as single string)
-        default: 'vitesse-light',
+        default: 'github-light',
         // Theme used if `html.dark`
-        dark: 'vitesse-dark',
+        dark: 'github-dark',
         // Theme used if `html.sepia`
         sepia: 'monokai',
       },

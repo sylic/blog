@@ -30,7 +30,7 @@ export const homePageTabs = [
   {
     title: "Me",
     icon: h(Icon, { name: 'proicons:coffee-hot', class: 'header-icon-class' }),
-    path: '/',
+    path: '/me',
     showPagenation: false
   },
   {

@@ -13,9 +13,12 @@
 import Tabs from '~/components/homePage/Tabs.vue';
 import Pagenation from '~/components/homePage/Pagenation.vue';
 import { homePageTabs } from '@/config';
-import {} from 'vue';
 const router = useRouter();
-const tabIndex = ref(0);
+const route = useRoute();
+const tabIndex = ref();
+onMounted(() => {
+  tabIndex.value = homePageTabs.findIndex(item => item.path == route.path);
+});
 const needShowPagenation = ref(false);
 watch(
   () => tabIndex.value,
@@ -25,6 +28,7 @@ watch(
     router.push({ path });
   }
 );
+
 const findPath = () => {
   return homePageTabs.find((item, index) => index == tabIndex.value);
 };
@@ -40,7 +44,11 @@ const handleTabChange = index => {
   flex-direction: column;
   position: relative;
   .main-part {
-    flex: 1;
+    // flex: 1;
+    margin-bottom: 10px;
+    height: calc(
+      100% - var(--pagenation-height) - var(--tab-card-height) - 10px
+    );
   }
 }
 </style>

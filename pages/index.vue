@@ -1,7 +1,6 @@
-<!-- 根路由 -->
 <template>
   <div class="content-part">
-    <ContentDoc path="me" class="slide-enter-content" />
+    <NuxtPage :foobar="123" />
   </div>
 </template>
 
@@ -9,5 +8,7 @@
 
 <style lang="scss" scoped>
 .content-part {
+  width: 100%;
+  height: 100%;
 }
 </style>

@@ -14,13 +14,23 @@
 import TabCard from './TabCard.vue';
 import {} from 'vue';
 import { homePageTabs } from '@/config';
-const activedIndex = ref(0);
+const activedIndex = ref();
 const emits = defineEmits(['handleChange']);
-emits('handleChange', 0);
+const route = useRoute();
+
+// 点击tab切换
 const handleTabChange = index => {
   activedIndex.value = index;
   emits('handleChange', index);
 };
+
+watch(
+  () => route.path,
+  val => {
+    activedIndex.value = homePageTabs.findIndex(item => item.path == val);
+  },
+  { immediate: true }
+);
 </script>
 
 <style lang="scss" scoped>
