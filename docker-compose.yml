@@ -1,0 +1,17 @@
+version: '3'
+services:
+  nuxt-app:
+    build: 
+      context: .
+      dockerfile: "./Dockerfile"
+    container_name: "nuxt-demo"
+    environment:
+      NITRO_PORT: 3001
+    ports:
+      - 3001:3001
+    command: ["node", "./server/index.mjs"]
+    networks:
+      - nuxt-networks
+
+networks:
+  nuxt-networks:
