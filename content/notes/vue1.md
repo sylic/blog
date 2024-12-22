@@ -1,3 +1,14 @@
+---
+date: 2024-04-16
+tags:
+  - example
+  - nuxt
+  - vue
+title: 这是一篇介绍Nuxt相关知识的文章，建议你在开始写项目之前先大致浏览一下
+---
+
+Nuxt 是一个免费且开源的框架，它提供了一种直观且可扩展的方式来创建类型安全、高性能和生产级别的全栈 Web 应用和网站，使用的是 Vue.js。 我们做了一切，让你从一开始就可以编写 . vue 文件，同时在开发中享受到热模块替换的便利，并在生产中获得高性能的应用，其中默认启用了服务器端渲染。
+
 > 原文地址： https://masteringnuxt.com/blog/24-time-saving-tips-for-nuxt3
 >
 > 我的博客： https://iamsee.top

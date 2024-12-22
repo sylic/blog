@@ -14,7 +14,6 @@ import Tabs from '~/components/homePage/Tabs.vue';
 import Pagenation from '~/components/homePage/Pagenation.vue';
 import { homePageTabs } from '@/config';
 const router = useRouter();
-const route = useRoute();
 const tabIndex = ref();
 
 const needShowPagenation = ref(false);
@@ -42,7 +41,6 @@ const handleTabChange = index => {
   flex-direction: column;
   position: relative;
   .main-part {
-    // flex: 1;
     margin-bottom: 10px;
     height: calc(
       100% - var(--pagenation-height) - var(--tab-card-height) - 10px

@@ -14,9 +14,12 @@ header {
 
 .content-part {
   --pagenation-height:40px;
-  --border-color-grey:#e2e2e5
+  --border-color-grey:#e2e2e5;
+  --border-radius-base:10px;
+  --border-radius-base-8:8px;
+  --color-pink:#f3d0d7;
 }
-// 声明主题色变量
+/* // 声明主题色变量 */
 :root {
   --bg-color-light: #f5f5f5;
   --bg-color-dark: #333333;

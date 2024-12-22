@@ -36,11 +36,11 @@ export function insertYearToPosts(posts: any) {
   )
 }
 
-// 根据文件名获取markdown文件内容
+// 根据文件名获取markdown文件内容 对应content目录下的文件
 export async function getIncludedYearPosts(dirName: string) {
   try {
-    const result = await queryContent(dirName).sort({ date: -1 }).find()
-    return insertYearToPosts(result)
+    const result = await queryContent(dirName).sort({ date: -1 }).find();
+    return result
   } catch (e) {
     console.error(e)
     return []

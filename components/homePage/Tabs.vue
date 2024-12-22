@@ -27,6 +27,11 @@ const handleTabChange = index => {
 watch(
   () => route.path,
   val => {
+    if (val == '/') {
+      // 根目录 默认选中第一个
+      activedIndex.value = 0;
+      emits('handleChange', activedIndex.value);
+    }
     activedIndex.value = homePageTabs.findIndex(item => item.path == val);
   },
   { immediate: true }
@@ -36,7 +41,7 @@ watch(
 <style lang="scss" scoped>
 .tab-part {
   .active {
-    background-color: #f3d0d7;
+    background-color: var(--color-pink);
   }
 }
 </style>
