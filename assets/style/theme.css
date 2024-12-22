@@ -30,12 +30,12 @@ header {
   --bg-color: var(--bg-color-light);
   --text-color: var(--text-color-light);
 }
-//给Body加自定义属性theme-mode- 黑暗模式下
+/* //给Body加自定义属性theme-mode- 黑暗模式下 */
 :root body[theme-mode='dark'] {
   --bg-color: var(--bg-color-dark);
   --text-color: var(--text-color-dark);
 }
-// 浅色模式
+/* // 浅色模式 */
 :root body[theme-mode='light'] {
   --bg-color: var(--bg-color-light);
   --text-color: var(--text-color-light);
