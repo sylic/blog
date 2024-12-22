@@ -26,49 +26,6 @@ const props = defineProps({
 const post = props.post;
 const parsedContent = ref([]);
 
-// const parseContent = children => {
-//   return children
-//     .map(child => {
-//       if (
-//         child.type === 'element' &&
-//         ['h1', 'h2', 'h3', 'h4', 'h5', 'p'].includes(child.tag)
-//       ) {
-//         let className = '';
-//         switch (child.tag) {
-//           case 'h1':
-//             className = 'heading-1';
-//             break;
-//           case 'h2':
-//             className = 'heading-2';
-//             break;
-//           case 'h3':
-//             className = 'heading-3';
-//             break;
-//           case 'h4':
-//             className = 'heading-4';
-//             break;
-//           case 'h5':
-//             className = 'heading-5';
-//             break;
-//           case 'p':
-//             className = 'paragraph';
-//             break;
-//           default:
-//             className = '';
-//         }
-//         return {
-//           tag: child.tag,
-//           props: child.props,
-//           class: className,
-//           children: child.children.filter(
-//             c => c.type === 'text' || c.type === 'element'
-//           ),
-//         };
-//       }
-//     })
-//     .filter(Boolean);
-// };
-
 const parseContent = children => {
   return children.map(child => {
     if (child.type === 'element') {

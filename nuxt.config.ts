@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'LiLiStar\'s HomePage' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/icon.svg' }
+        { rel: 'icon', type: 'image/x-icon', href: '/icon.png' }
       ]
     }
   },

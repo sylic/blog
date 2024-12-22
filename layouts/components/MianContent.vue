@@ -16,9 +16,7 @@ import { homePageTabs } from '@/config';
 const router = useRouter();
 const route = useRoute();
 const tabIndex = ref();
-onMounted(() => {
-  tabIndex.value = homePageTabs.findIndex(item => item.path == route.path);
-});
+
 const needShowPagenation = ref(false);
 watch(
   () => tabIndex.value,
