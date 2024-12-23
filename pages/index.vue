@@ -1,6 +1,6 @@
 <template>
   <div class="content-part">
-    <NuxtPage :foobar="123" />
+    <NuxtPage />
   </div>
 </template>
 
