@@ -1,6 +1,6 @@
 <template>
   <div class="home-layout flex-col">
-    <header class="p-2em header-wrapper">
+    <header class="header-wrapper">
       <Header></Header>
     </header>
     <NuxtPage />
@@ -16,5 +16,6 @@ import Header from './components/Header';
 
 .header-wrapper {
   height: var(--wrap-height);
+  transition: all 0.4s ease-out;
 }
 </style>

@@ -98,6 +98,7 @@ html,body{
       height: 100%;
       width: calc(100% - var(--sider-width) * 2);
       position: relative;
+      overflow-y: scroll;
     }
   }
 }
