@@ -4,15 +4,17 @@
 const route = useRoute();
 const post = route.params.post as Array<string>;
 const path = post.join('/');
+console.log("page doc");
+
 </script>
 
 <template>
   <section class="prose relative slide-enter-content">
     <ContentDoc :path="path">
       <template #default="{ doc }">
-        <doc-back />
+        <!-- <doc-back />
         <doc-render :article="doc" />
-        <doc-toc :toc="doc.body.toc" />
+        <doc-toc :toc="doc.body.toc" /> -->
         <!-- config your giscus -->
         <!-- <Giscus
           repo="your/repo name"
@@ -28,6 +30,7 @@ const path = post.join('/');
           lang="zh-CN"
           loading="lazy"
         /> -->
+        qklwekd
       </template>
 
       <template #empty>
