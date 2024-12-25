@@ -2,22 +2,21 @@ header {
   --wrap-height: 100px;
 }
 #__nuxt {
-  --sider-width: 15%;
+  --sider-width: 20%;
   width: 100%;
   height: 100%;
-  /* --tab-card-width:200px; */
-  --tab-card-height:30px;
-  --base-raduis:8px;
+  --tab-card-height: 30px;
+  --base-raduis: 8px;
   --icon-color: #444444;
   --icon-size: 26px;
 }
 
 .content-part {
-  --pagenation-height:40px;
-  --border-color-grey:#e2e2e5;
-  --border-radius-base:10px;
-  --border-radius-base-8:8px;
-  --color-pink:#f3d0d7;
+  --pagenation-height: 40px;
+  --border-color-grey: #e2e2e5;
+  --border-radius-base: 10px;
+  --border-radius-base-8: 8px;
+  --color-pink: #f3d0d7;
   --box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
   --box-shadow-hover: 0 0px 10px rgba(0, 0, 0, 0.15);
 }

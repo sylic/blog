@@ -5,9 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import {} from 'vue';
-import { getIncludedYearPosts } from '@/utils/index';
+import { } from 'vue';
+import { getPosts } from '@/utils/index';
 
-const posts = await getIncludedYearPosts('summary');
+const posts = await getPosts('summary');
 </script>
 <style lang="scss" scoped></style>

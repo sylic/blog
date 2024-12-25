@@ -1,45 +1,34 @@
-<script setup lang="ts">
+<template>
+  <div class="content-part">
+    <main class="content-wrapper flex-row">
+      <!-- 大纲 -->
+      <div class="block title-box">
+        <Catalogue :toc="mdFile.body.toc.links" />
+      </div>
+      <div class="list-wrapper margin-b-10">
+        <ContentDoc :path="path" />
+      </div>
+    </main>
+  </div>
+</template>
+<script setup>
 // import Giscus from '@giscus/vue';
-
+import { getPost } from '@/utils/index';
+import Catalogue from '@/components/post/catalogue.vue';
 const route = useRoute();
-const post = route.params.post as Array<string>;
-const path = post.join('/');
-console.log("page doc");
+const post = route.params.post;
+const path = post.join('/'); // 对应content目录下文件的路径
+
+// 通过路径获取md文件
+const mdFile = await getPost(path);
+
 
 </script>
-
-<template>
-  <section class="prose relative slide-enter-content">
-    <ContentDoc :path="path">
-      <template #default="{ doc }">
-        <!-- <doc-back />
-        <doc-render :article="doc" />
-        <doc-toc :toc="doc.body.toc" /> -->
-        <!-- config your giscus -->
-        <!-- <Giscus
-          repo="your/repo name"
-          repo-id="repo id"
-          category-id="repo category-id"
-          category="comments"
-          mapping="title"
-          term="Welcome to my blog!"
-          reactions-enabled="1"
-          emit-metadata="1"
-          input-position="top"
-          theme="light_tritanopia"
-          lang="zh-CN"
-          loading="lazy"
-        /> -->
-        qklwekd
-      </template>
-
-      <template #empty>
-        <h1 class="text-center">Document is empty😅</h1>
-      </template>
-
-      <template #not-found>
-        <h1 class="text-center">Not Found Any Document😗</h1>
-      </template>
-    </ContentDoc>
-  </section>
-</template>
+<style lang="scss" scoped>
+.title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+</style>

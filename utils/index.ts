@@ -10,39 +10,23 @@ export const getSystemTheme = (): string => {
   }
 }
 
-export function formattedDate(date: string) {
-  if (!date) return ''
-  const dateObject = parseISO(date)
-  const formattedResult = format(dateObject, 'yyyy/MM/dd')
-  return formattedResult
-}
-
-export function insertYearToPosts(posts: any) {
-  let currentYear = -1
-  return posts.reduce(
-    (posts: any, post: any) => {
-      const year = new Date(post.date).getFullYear()
-      if (year !== currentYear && !isNaN(year)) {
-        posts.push({
-          isMarked: true,
-          year,
-        })
-        currentYear = year
-      }
-      posts.push(post)
-      return posts
-    },
-    [],
-  )
-}
-
 // 根据文件名获取markdown文件内容 对应content目录下的文件
-export async function getIncludedYearPosts(dirName: string) {
+export async function getPosts(dirName: string) {
   try {
     const result = await queryContent(dirName).sort({ date: -1 }).find();
     return result
   } catch (e) {
     console.error(e)
     return []
+  }
+}
+// 查询某个具体的文件内容
+export async function getPost(dirName: string) {
+  try {
+    const result = await queryContent(dirName).findOne();
+    return result
+  } catch (e) {
+    console.error(e)
+    return {}
   }
 }
