@@ -1,5 +1,5 @@
 <template>
-  <div class="post-card hover" @click="goToPostDetail">
+  <div class="post-card hover" @click.prevent="goToPostDetail">
     <div class="post-title">{{ post.title }}</div>
     <div class="post-description dark-white">{{ post.description }}</div>
     <div class="other-line flex-row flex-sb">
@@ -8,7 +8,11 @@
         <Tag v-for="tag in post.tags" :key="tag" :tag="tag">
           <template #default>#{{ tag }}</template>
         </Tag>
-        <div v-if="tagLength > 4" class="tag" :title="`折叠了 ${tagLength - 4} 个标签`">
+        <div
+          v-if="tagLength > 4"
+          class="tag"
+          :title="`折叠了 ${tagLength - 4} 个标签`"
+        >
           <Tag>...</Tag>
         </div>
       </div>
@@ -84,6 +88,7 @@ const goToPostDetail = () => {
 
 <style lang="scss">
 .post-card {
+  user-select: none;
   width: 70%;
   border: 1px solid var(--border-color-grey);
   padding: 16px;
@@ -111,7 +116,8 @@ const goToPostDetail = () => {
     font-size: 0.8em;
   }
 
-  .other-line {}
+  .other-line {
+  }
 }
 
 .post-card:hover {

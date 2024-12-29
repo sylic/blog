@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-12-16',
   devtools: { enabled: false },
-  modules: ['@nuxt/fonts', '@nuxt/icon', '@nuxtjs/color-mode', '@nuxt/content', '@nuxtjs/robots'],
+  modules: ['@nuxt/fonts', '@nuxt/icon', '@nuxtjs/color-mode', '@nuxt/content'],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
