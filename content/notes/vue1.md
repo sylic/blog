@@ -1,5 +1,5 @@
 ---
-date: 2024-04-16
+date: 2024-12-30
 tags:
   - example
   - nuxt

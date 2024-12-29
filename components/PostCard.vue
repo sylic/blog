@@ -4,15 +4,11 @@
     <div class="post-description dark-white">{{ post.description }}</div>
     <div class="other-line flex-row flex-sb">
       <div class="post-date dark-white">{{ post.date }}</div>
-      <div class="post-tags flex-row">
+      <div class="post-tags flex-row" v-if="tagLength">
         <Tag v-for="tag in post.tags" :key="tag" :tag="tag">
           <template #default>#{{ tag }}</template>
         </Tag>
-        <div
-          v-if="tagLength > 4"
-          class="tag"
-          :title="`折叠了 ${tagLength - 4} 个标签`"
-        >
+        <div v-if="tagLength > 4" class="tag" :title="`折叠了 ${tagLength - 4} 个标签`">
           <Tag>...</Tag>
         </div>
       </div>
@@ -33,7 +29,7 @@ const props = defineProps({
 
 const post = props.post;
 // tag 超过4个就截取
-const tagLength = post.tags.length;
+const tagLength = post.tags ? post.tags.length : 0;
 if (tagLength > 4) {
   post.tags = post.tags.slice(0, 4);
 }
@@ -94,10 +90,12 @@ const goToPostDetail = () => {
   border-radius: var(--border-radius-base);
   margin-top: 16px;
   transition: box-shadow 0.3s ease;
+
   .post-title {
     font-weight: bold;
     font-size: 1.1em;
   }
+
   .post-description {
     margin: 10px 0;
     font-size: 0.9em;
@@ -108,12 +106,14 @@ const goToPostDetail = () => {
     display: -webkit-box;
     -webkit-box-orient: vertical;
   }
+
   .post-date {
     font-size: 0.8em;
   }
-  .other-line {
-  }
+
+  .other-line {}
 }
+
 .post-card:hover {
   box-shadow: var(--box-shadow);
 }
