@@ -43,47 +43,6 @@ const goToPostDetail = () => {
     path: `/post${props.post._path}`,
   });
 };
-// 这个方法在详情页再使用，列表页不需要
-// const parseContent = children => {
-//   return children.map(child => {
-//     if (child.type === 'element') {
-//       let className = '';
-//       switch (child.tag) {
-//         case 'h1':
-//           className = 'heading-1';
-//           break;
-//         case 'h2':
-//           className = 'heading-2';
-//           break;
-//         case 'h3':
-//           className = 'heading-3';
-//           break;
-//         case 'h4':
-//           className = 'heading-4';
-//           break;
-//         case 'h5':
-//           className = 'heading-5';
-//           break;
-//         case 'p':
-//           className = 'paragraph';
-//           break;
-//         default:
-//           className = 'md-content';
-//       }
-//       return {
-//         tag: 'div',
-//         props: child.props,
-//         class: className,
-//         children: parseContent(child.children || []),
-//       };
-//     } else if (child.type === 'text') {
-//       return {
-//         tag: 'span',
-//         value: child.value,
-//       };
-//     }
-//   });
-// };
 </script>
 
 <style lang="scss">

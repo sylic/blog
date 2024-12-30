@@ -2,7 +2,6 @@ import { Page } from "@/config"
 
 // 获取系统主题色
 export const getSystemTheme = (): string => {
-  console.log("⭐ ~ 当前打印的内容 ~ :", window);
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     return 'dark';
   } else {
@@ -24,6 +23,11 @@ export async function getPosts(dirName: string, pageNo: number = 1) {
 }
 // 查询某个具体的文件内容
 export async function getPost(dirName: string) {
+  // await useAsyncData(() => {
+  //   return queryCollection('blog')
+  //     .path(route.path)
+  //     .first()
+  // })
   try {
     const result = await queryContent(dirName).findOne();
     return result

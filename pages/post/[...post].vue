@@ -7,7 +7,13 @@
         <div class="content-header title-1">
           {{ mdFile.title }}
         </div>
-        <ContentDoc :path="path" />
+        <div class="post-date">
+          <Icon name="proicons:text-edit-style" class="date-icon"></Icon>
+          写于 {{ mdFile.date }}
+        </div>
+        <div class="post-body">
+          <ContentRenderer :value="mdFile" />
+        </div>
       </div>
       <div class="block title-box">
         <Catalogue
@@ -29,6 +35,7 @@ const path = post.join('/'); // 对应content目录下文件的路径
 
 // 通过路径获取md文件
 const mdFile = await getPost(path);
+// console.log(mdFile);
 
 // 第一个标题的id
 const firstId = ref();
@@ -44,7 +51,7 @@ onMounted(() => {
 
   const observer = new IntersectionObserver(handleIntersect, {
     root: document.querySelector('.list-wrapper'), // 监听的根元素
-    threshold: 0.5, // 触发回调的阈值
+    threshold: 0.2, // 触发回调的阈值
   });
 
   // 获取list-wrapper元素下所有的h2, h3标签
@@ -58,6 +65,7 @@ const handleIntersect = entries => {
   visibleHeaders.value = entries
     .filter(entry => entry.isIntersecting)
     .map(entry => entry.target);
+  // console.log(visibleHeaders.value);
   const activeHeader = visibleHeaders.value[visibleHeaders.value.length - 1];
   if (activeHeader) {
     catalogRef.value.setActiveElement(activeHeader.id);
@@ -83,6 +91,16 @@ const scrollToSection = id => {
 };
 </script>
 <style lang="scss" scoped>
+.post-date {
+  display: flex;
+  align-items: center;
+  .date-icon {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+  margin: 10px 0 5px 0;
+  color: #435585;
+}
 .title-box {
   display: flex;
   flex-direction: column;
@@ -93,6 +111,6 @@ const scrollToSection = id => {
 
 .title-1 {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 </style>

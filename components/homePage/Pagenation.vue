@@ -80,14 +80,10 @@ const handlePageChange = index => {
 
 <style lang="scss" scoped>
 .pagenation {
-  // width: 100%;
   height: var(--pagenation-height);
   user-select: none;
-  position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 15px;
+  margin-top: 20px;
   .cell {
     padding: 0 10px;
     height: 42px;

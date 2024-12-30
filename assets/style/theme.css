@@ -19,7 +19,14 @@ header {
   --color-pink: #f3d0d7;
   --box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
   --box-shadow-hover: 0 0px 10px rgba(0, 0, 0, 0.15);
-  --post-text-color: #3E5879; /* 文章内容颜色 */
+  --post-text-color: #3e5879; /* 文章内容颜色 */
+  --grey-dark: #b4b4b8;
+}
+/* 文章 相关CSS 变量 */
+.list-wrapper {
+  --post-box-radius: 0.5em;
+  --post-box-padding: 1.2em 1em;
+  --post-box-bg: #e2e2e5;
 }
 /* // 声明主题色变量 */
 :root {
