@@ -130,6 +130,7 @@ body {
 
 // md文档相关样式
 .post-body {
+  margin-bottom: 10px;
   //标题
   h1,
   h2,
@@ -139,32 +140,36 @@ body {
   h6 {
     font-size: 1.2em;
     cursor: text;
-    color: #091a28;
+    color: var(--post-title-color);
   }
 
   h1>a ,h2>a ,h3>a ,h4>a ,h5>a ,h6>a {
-    color: #091a28;
+    color: var(--post-title-color);
     text-decoration: none;
   }
   // ol li 
   ul,
   ol {
     padding-left: 2em;
+    margin-top: 2px;
   }
   ul {
     list-style: disc; // 实心圆
+    li{
+      margin-top: 2px;
+    }
     li::marker {
       color: var(--grey-dark);
     }
   }
   // 引用块
   blockquote {
-    padding: 1em;
-    margin: 0;
+    padding: 5px;
+    margin-left:10px ;
     border-left: 5px solid var(--grey-dark);
     border-radius: 0.5em;
     font-size: 1em;
-    line-height: 1.5em;
+    // line-height: 1.5em;
   }
   // 行内代码
   :not(pre >code){
@@ -182,7 +187,7 @@ body {
   // 代码块
   pre:has(> code) {
     padding: 1.2em 1em;
-    margin: 0;
+    margin: 15px 10px;
     background-color: var(--post-box-bg);
     border-radius: 0.5em;
     font-size: 1em;
@@ -192,7 +197,7 @@ body {
     code {
       padding: 0;
       margin: 0;
-      background-color: #e2e2e5;
+      background-color: var(--post-box-bg);
       border-radius: 5px;
       font-size: 1em;
       line-height: 1.5em;
