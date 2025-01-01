@@ -28,6 +28,7 @@ header {
   --post-box-radius: 0.5em;
   --post-box-padding: 1.2em 1em;
   --post-box-bg: #e2e2e5;
+  --post-code-raius:5px;
 }
 /* // 声明主题色变量 */
 :root {

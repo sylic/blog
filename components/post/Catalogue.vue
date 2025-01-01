@@ -26,8 +26,8 @@
   </div>
 </template>
 
-<script setup>
-import { defineProps } from 'vue';
+<script setup lang="ts">
+import { defineProps, defineEmits, defineExpose } from 'vue';
 const prop = defineProps({
   toc: Array,
 });
@@ -41,11 +41,11 @@ const activeElement = ref(null);
   children： 下级标题
 }
 */
-const handleClick = (event, c) => {
+const handleClick = (event: any, c: any) => {
   activeElement.value = c.id;
   emit('clickCB', c);
 };
-const setActiveElement = id => {
+const setActiveElement = (id: number) => {
   activeElement.value = id;
 };
 

@@ -26,23 +26,23 @@
   </div>
 </template>
 <script setup>
-// import Giscus from '@giscus/vue';
+import { usePostLinks, useCodeCopy } from '@/hooks/usePost';
 import { getPost } from '@/utils/index';
-import Catalogue from '@/components/post/catalogue.vue';
+import Catalogue from '~/components/post/Catalogue.vue';
 const route = useRoute();
 const post = route.params.post;
 const path = post.join('/'); // 对应content目录下文件的路径
 
 // 通过路径获取md文件
 const mdFile = await getPost(path);
-// console.log(mdFile);
 
 // 第一个标题的id
 const firstId = ref();
 // 大纲组件的引用
 const catalogRef = ref(null);
 const visibleHeaders = ref([]);
-
+usePostLinks(); // 文章的通用hooks
+useCodeCopy(); //插入复制按钮
 // 获取第一个标题的id
 onMounted(() => {
   firstId.value = mdFile.body.toc.links.length

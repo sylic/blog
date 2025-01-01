@@ -5,7 +5,6 @@
       class="copy-btn code-data-copy"
       @click="copyMessage"
       data-clipboard-action="copy"
-      :data-clipboard-text="code"
     >
       <div>
         <svg
@@ -52,7 +51,6 @@
 </template>
 
 <script setup>
-import Clipboard from 'clipboard'; //复制插件
 const props = defineProps({
   code: String,
   success: Boolean,
@@ -63,18 +61,19 @@ const copySuccessed = ref(false);
 copySuccessed.value = props.success;
 
 const copyMessage = () => {
-  let clipboard = new Clipboard('.code-data-copy');
-  clipboard.on('success', function (e) {
-    copySuccessed.value = true;
-    setTimeout(() => {
+  // 去除多余的换行符
+  const cleanedCode = props.code.replace(/\n\s*\n/g, '\n');
+  navigator.clipboard
+    .writeText(cleanedCode)
+    .then(() => {
+      copySuccessed.value = true;
+      setTimeout(() => {
+        copySuccessed.value = false;
+      }, 2000);
+    })
+    .catch(err => {
       copySuccessed.value = false;
-    }, 1000);
-    clipboard.destroy(); // 销毁,避免多次点击重复出现
-  });
-  clipboard.on('error', function (e) {
-    console.log('复制失败', e);
-    copySuccessed.value = false;
-  });
+    });
 };
 </script>
 
