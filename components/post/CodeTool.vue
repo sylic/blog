@@ -4,7 +4,6 @@
     <div
       class="copy-btn code-data-copy"
       @click="copyMessage"
-      data-clipboard-action="copy"
     >
       <div>
         <svg
@@ -55,7 +54,6 @@ const props = defineProps({
   code: String,
   success: Boolean,
 });
-const { code } = toRefs(props);
 // 子组件不能直接改父组件传过来的props，所以需要用ref包装一下
 const copySuccessed = ref(false);
 copySuccessed.value = props.success;
