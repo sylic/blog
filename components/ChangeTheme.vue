@@ -1,5 +1,5 @@
 <template>
-  <div class="hover marin-r-10" @click="changeMode">
+  <div class="hover marin-r-10" @click="changeMode" title="切换主题">
     <component :is="currentComp"></component>
   </div>
 </template>
