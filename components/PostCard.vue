@@ -1,7 +1,7 @@
 <template>
   <div class="post-card hover" @click.prevent="goToPostDetail">
     <div class="post-title">{{ post.title }}</div>
-    <div class="post-description dark-white">{{ post.description }}</div>
+    <div class="post-description dark-white text-threeline ">{{ post.description }}</div>
     <div class="other-line flex-row flex-sb">
       <div class="post-date dark-white">{{ post.date }}</div>
       <div class="post-tags flex-row" v-if="tagLength">
@@ -63,12 +63,6 @@ const goToPostDetail = () => {
   .post-description {
     margin: 10px 0;
     font-size: 0.9em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
   }
 
   .post-date {

@@ -121,11 +121,30 @@ body {
   }
 }
 
+
 // 文本一行展示
 .text-oneline {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap
+}
+// 文本两行展示
+.text-twoline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+// 文本三行展示
+.text-threeline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
 
 // md文档相关样式
