@@ -13,14 +13,18 @@
         </div>
         <div class="post-body">
           <ContentRenderer :value="mdFile" />
+          <Giscus
+          repo="sylic/blog"
+          repo-id="R_kgDONeSzSQ"
+          category-id="DIC_kwDONeSzSc4CluyD"
+          category="comments"
+          mapping="pathname" term="Welcome to my blog!" reactions-enabled="1"
+          emit-metadata="0" input-position="top" theme="light_tritanopia" lang="zh-CN" loading="lazy"
+         />
         </div>
       </div>
       <div class="block title-box">
-        <Catalogue
-          ref="catalogRef"
-          :toc="mdFile.body.toc.links"
-          @clickCB="handleCB"
-        />
+        <Catalogue ref="catalogRef" :toc="mdFile.body.toc.links" @clickCB="handleCB" />
       </div>
     </main>
   </div>
@@ -29,6 +33,7 @@
 import { usePostLinks, useCodeCopy } from '@/hooks/usePost';
 import { getPost } from '@/utils/index';
 import Catalogue from '~/components/post/Catalogue.vue';
+import Giscus from '@giscus/vue'
 const route = useRoute();
 const post = route.params.post;
 const path = post.join('/'); // 对应content目录下文件的路径
@@ -94,13 +99,16 @@ const scrollToSection = id => {
 .post-date {
   display: flex;
   align-items: center;
+
   .date-icon {
     font-size: 24px;
     margin-right: 5px;
   }
+
   margin: 10px 0 5px 0;
   color: #435585;
 }
+
 .title-box {
   display: flex;
   flex-direction: column;
