@@ -52,3 +52,7 @@ export const homePageTabs = [
     showPagenation: false
   },
 ]
+// 分页配置
+export const Page = {
+  pageSize: 4
+}

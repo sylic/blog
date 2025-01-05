@@ -19,6 +19,7 @@ const props = defineProps({
   height: var(--tab-card-height);
   border-radius: var(--base-raduis);
   align-items: center;
+  user-select: none;
   .tab-name {
     margin-left: 0.2em;
     font-size: 1.2em;

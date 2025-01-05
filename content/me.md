@@ -1,3 +1,8 @@
+---
+date: 2024-04-16
+title: me
+---
+
 ## 👋 Hi,my friend
 
 - 🗽 <span style="font-family:boldsymbol" size=3>I am a front-end developer and currently working in Nanjing **,** Jiangsu, with 1.5 years of work experience. </span><br/><br/>

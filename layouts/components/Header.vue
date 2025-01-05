@@ -6,6 +6,7 @@
         {{ authorInfo.name }}
       </div>
       <div class="outer-links flex-row">
+        <Icon @click="handleSearch" name="proicons:search" class="header-icon-class marin-r-10 hover" title="搜索"></Icon>
         <ChangeTheme />
         <!-- a 标签访问过后颜色会变为链接颜色 -->
         <div
@@ -15,7 +16,6 @@
           :title="link.title"
           @click="handleLinkClick(link.herf)"
         >
-          <span class="hidden md:inline">{{ link.title }}</span>
           <component :is="link.icon" />
         </div>
       </div>
@@ -24,14 +24,22 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import {} from 'vue';
 import { authorInfo, outerLinks } from '@/config';
 import { Icon } from '#components';
+import { useSearch } from "@/hooks/useSearch"
 
-const handleLinkClick = (path: string) => {
+const {mountSearch} = useSearch();
+
+const handleLinkClick = (path) => {
   window.open(path);
 };
+
+// 搜索
+const handleSearch =() => {
+  mountSearch();
+}
 </script>
 
 <style lang="scss">
