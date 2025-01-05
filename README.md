@@ -77,3 +77,18 @@ npm run dev
 
     每一个文件，都代表一个路由地址，如index.vue --> /    post/a.vue --> post/a
 
+### 其他
+  1. 评论功能
+
+     github Giscus  https://giscus.app/zh-CN
+
+  2. 图标
+
+     使用 [nuxt/icon](https://nuxt.com.cn/modules/icon)模块
+    
+      ```
+      <Icon name="proicons:search">
+      // name字段指定要渲染哪个集合下的图标，可以在这里面选择想要的图标 https://icon-sets.iconify.design/
+      ```
+
+      ![alt text](image.png)
