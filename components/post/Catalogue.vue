@@ -61,7 +61,7 @@ defineExpose({
   height: 100vh;
   overflow-y: auto;
   user-select: none;
-  color: var(--post-text-color);
+  color: var(--text-color);
   .title {
     padding: 3px 10px;
 

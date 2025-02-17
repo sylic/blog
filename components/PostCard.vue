@@ -1,9 +1,9 @@
 <template>
   <div class="post-card hover" @click.prevent="goToPostDetail">
     <div class="post-title">{{ post.title }}</div>
-    <div class="post-description dark-white text-threeline ">{{ post.description }}</div>
+    <div class="post-description text-threeline ">{{ post.description }}</div>
     <div class="other-line flex-row flex-sb">
-      <div class="post-date dark-white">{{ post.date }}</div>
+      <div class="post-date">{{ post.date }}</div>
       <div class="post-tags flex-row" v-if="tagLength">
         <Tag v-for="tag in post.tags" :key="tag" :tag="tag">
           <template #default>#{{ tag }}</template>
@@ -49,7 +49,7 @@ const goToPostDetail = () => {
 .post-card {
   user-select: none;
   width: 70%;
-  border: 1px solid var(--border-color-grey);
+  border: 1px solid var(--post-border);
   padding: 16px;
   border-radius: var(--border-radius-base);
   margin-top: 16px;
@@ -65,11 +65,13 @@ const goToPostDetail = () => {
     font-size: 0.9em;
   }
 
-  .post-date {
-    font-size: 0.8em;
-  }
+ 
 
   .other-line {
+     .post-date {
+      font-size: 0.8em;
+      color: var(--post-description);
+    }
   }
 }
 

@@ -15,7 +15,7 @@ import {} from 'vue';
   height: 24px;
   line-height: 24px;
   border-radius: var(--border-radius-base-8);
-  background-color: var(--color-pink);
+  background-color: var(--bg-block-color);
   font-size: 0.6em;
   margin-right: 8px;
 }

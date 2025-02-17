@@ -1,8 +1,10 @@
 <template>
-  <NuxtLayout>
-    <NuxtLoadingIndicator color="#777" />
+  <div class="home-layout flex-col">
+    <header class="header-wrapper">
+      <Header></Header>
+    </header>
     <NuxtPage />
-  </NuxtLayout>
+  </div>
 </template>
 <style>
 .page-enter-active,
@@ -13,5 +15,15 @@
 .page-leave-to {
   opacity: 0;
   filter: blur(1rem);
+}
+.home-layout {
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header-wrapper {
+  height: var(--wrap-height);
+  transition: all 0.4s ease-out;
 }
 </style>

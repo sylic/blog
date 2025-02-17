@@ -95,7 +95,7 @@ const handlePageChange = index => {
     margin-right: 5px;
   }
   .active {
-    background-color: var(--color-pink);
+    background-color: var(--bg-block-color);
   }
   .cell-disabled {
     font-weight: normal;
@@ -104,11 +104,11 @@ const handlePageChange = index => {
   .next-active:hover,
   .pre-active:hover {
     cursor: pointer;
-    background-color: var(--color-pink);
+    background-color: var(--bg-block-color);
   }
   .page-cell:hover {
     cursor: pointer;
-    background-color: var(--color-pink);
+    background-color: var(--bg-block-color);
   }
 }
 </style>

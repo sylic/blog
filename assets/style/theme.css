@@ -13,10 +13,8 @@ header {
 
 .content-part {
   --pagenation-height: 40px;
-  --border-color-grey: #e2e2e5;
   --border-radius-base: 10px;
   --border-radius-base-8: 8px;
-  --color-pink: #f3d0d7;
   --box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
   --box-shadow-hover: 0 0px 10px rgba(0, 0, 0, 0.15);
   --post-text-color: #3e5879; /* 文章内容颜色 */
@@ -31,25 +29,51 @@ header {
   --post-code-raius:5px;
 }
 /* // 声明主题色变量 */
-:root {
+html,
+body {
   --bg-color-light: #f5f5f5;
   --bg-color-dark: #333333;
   --text-color-light: #333333;
   --text-color-dark: #f5f5f5;
+  --bg-block-color-light:#e2e2e5;
+  --bg-block-color-dark:#C7C8CC;
+  --post-border-light:#e2e2e5;
+  --post-border-dark:transparent;
+  --post-description-light: #333333;
+  --post-description-dark: #e2e2e5;
+  --bg-code-box-light:#e2e2e5;
+  --bg-code-box-dark:#333333;
 }
-:root {
-  --bg-color: var(--bg-color-light);
-  --text-color: var(--text-color-light);
-}
-/* //给Body加自定义属性theme-mode- 黑暗模式下 */
-:root body[theme-mode='dark'] {
+/*
+--bg-color: 背景色
+--bg-block-color: 方块儿的背景色
+--text-color: 文字颜色
+
+*/
+
+/* 自定义属性theme-mode- 黑暗模式下 */
+.dark{
   --bg-color: var(--bg-color-dark);
   --text-color: var(--text-color-dark);
+  --bg-block-color: var(--bg-block-color-dark);
+  --post-border:var(--post-border-dark);
+  --post-description: var(--post-description-dark);
+  --bg-code-box: var(--bg-code-box-dark);
+  .gsc-left-header{
+    color: white;
+  }
 }
-/* // 浅色模式 */
-:root body[theme-mode='light'] {
+/*  浅色模式 */
+.light {
   --bg-color: var(--bg-color-light);
   --text-color: var(--text-color-light);
+  --bg-block-color: var(--bg-block-color-light);
+  --post-border:var(--post-border-light);
+  --post-description: var(--post-description-light);
+  --bg-code-box: var(--bg-code-box-light);
+    /* .gsc-left-header{
+    color: bl;
+  } */
 }
 html,
 body {
@@ -60,9 +84,4 @@ body {
   color: var(--text-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: var(--bg-color-dark);
-    --text-color: var(--text-color-dark);
-  }
-}
+

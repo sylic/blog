@@ -106,7 +106,7 @@ const scrollToSection = id => {
   }
 
   margin: 10px 0 5px 0;
-  color: #435585;
+  color: var(--post-description);
 }
 
 .title-box {

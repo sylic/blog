@@ -41,7 +41,7 @@ watch(
 <style lang="scss" scoped>
 .tab-part {
   .active {
-    background-color: var(--color-pink);
+    background-color: var(--bg-block-color);
   }
 }
 </style>

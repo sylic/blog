@@ -161,7 +161,7 @@ body {
     font-size: 1.2em;
     cursor: text;
     font-weight: 600;
-    color: var(--post-title-color);
+    color: var(--text-color);
   }
 
   h1>a,
@@ -171,14 +171,14 @@ body {
   h5>a,
   h6>a {
     cursor: text;
-    color: var(--post-title-color);
+    color: var(--text-color);
     text-decoration: none;
   }
 
   // ol li 
   ul,
   ol {
-    padding-left: 2em;
+    padding-left: 0;
     margin-top: 2px;
   }
 
@@ -208,7 +208,7 @@ body {
   :not(pre >code) {
     code {
       padding: 0.2em 0.5em;
-      margin: 0;
+      margin: 0 0.2em;
       background-color: var(--post-box-bg);
       color: #4C585B;
       border-radius: var(--post-code-raius);
@@ -221,8 +221,8 @@ body {
   // 代码块
   pre:has(> code) {
     padding: 1.2em 1em;
-    margin: 15px 10px;
-    background-color: var(--post-box-bg);
+    margin: 15px 0px;
+    background-color: var(--bg-code-box);
     border-radius: 0.5em;
     font-size: 1em;
     line-height: 1.5em;
@@ -231,10 +231,11 @@ body {
     code {
       padding: 0;
       margin: 0;
-      background-color: var(--post-box-bg);
+      background-color: var(--bg-code-box);
       border-radius: 5px;
       font-size: 1em;
       line-height: 1.5em;
+      // color: var(--text-color);
     }
   }
   .code-copy-added{
