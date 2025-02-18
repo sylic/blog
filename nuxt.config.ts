@@ -31,11 +31,10 @@ export default defineNuxtConfig({
     respectPathCase: true, // Use the same path case as the file system
     highlight: {
       theme: {
-        // Default theme (same as single string)
+        // 默认采用的主题是：背景浅色
         default: 'github-light',
-        // Theme used if `html.dark`
+        //暗黑模式下，背景色要为深色(如：#333333)，才能看见彩色的代码块
         dark: 'github-dark',
-        // Theme used if `html.sepia`
         sepia: 'monokai',
       },
       preload: [

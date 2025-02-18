@@ -47,7 +47,7 @@ const handleSearch =() => {
   width: 100%;
   height: var(--wrap-height);
   .author {
-    font-size: 2.25em;
+    font-size: var(--title-font-size);
   }
   .main-header {
     flex: 1;

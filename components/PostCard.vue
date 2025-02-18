@@ -32,10 +32,12 @@ const props = defineProps({
 });
 
 const post = props.post;
-// tag 超过4个就截取
+// tag 截取
 const tagLength = post.tags ? post.tags.length : 0;
-if (tagLength > 4) {
-  post.tags = post.tags.slice(0, 4);
+let clientWidth = document.documentElement.clientWidth;
+if (tagLength >=2) {
+  let sliceCnt = clientWidth > 767 ?4:1;
+  post.tags = post.tags.slice(0, sliceCnt);
 }
 
 const goToPostDetail = () => {
@@ -48,7 +50,7 @@ const goToPostDetail = () => {
 <style lang="scss">
 .post-card {
   user-select: none;
-  width: 70%;
+  width: var(--post-card-width);
   border: 1px solid var(--post-border);
   padding: 16px;
   border-radius: var(--border-radius-base);
@@ -57,12 +59,13 @@ const goToPostDetail = () => {
 
   .post-title {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: var(--post-card-title);
   }
 
   .post-description {
     margin: 10px 0;
     font-size: 0.9em;
+    color: var(--post-description);
   }
 
  

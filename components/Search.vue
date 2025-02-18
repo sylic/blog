@@ -138,7 +138,7 @@ const showKeyWordsFileter = (post) => {
 }
 
 .modal-container {
-  width: 35%;
+  width: var(--modal-width);
   height: 35%;
   margin: 70px auto;
   padding: 15px 20px;
@@ -149,6 +149,7 @@ const showKeyWordsFileter = (post) => {
   display: flex;
   flex-direction: column;
 }
+
 
 .modal-header{
   width: 100%;
@@ -161,6 +162,7 @@ const showKeyWordsFileter = (post) => {
   .search-box-icon{
     font-size: 1.5em;
     margin-right: 10px;
+    color: var(--icon-color);
   }
   .search-input{
     width: 100%;
@@ -189,26 +191,26 @@ const showKeyWordsFileter = (post) => {
     background-color: #fff;
     padding: 10px;
     border-radius: 6px;
+    color: var(--text-grey-color);
     .title{
       font-size: 1em;
       font-weight: 500;
-      /* display: flex;
-      align-items: center; */
       .key-word{
-        color: #f3d0d7;
+        color: var(--key-word-color);
         padding-left: 2px;
         padding-right: 2px;
+        font-weight: bolder;
       }
     }
     .description{
       margin-top: 5px;
       font-size: 0.9em;
-      /* color: #b4b4b8; */
     }
   }
 }
 .modal-footer{
   /* height: 40px; */
+  color: var(--text-grey-color);
   padding-left: 10px;
 }
 

@@ -1,5 +1,7 @@
 header {
   --wrap-height: 100px;
+  --title-font-size: 2.25em;
+  
 }
 #__nuxt {
   --sider-width: 20%;
@@ -9,6 +11,16 @@ header {
   --base-raduis: 8px;
   --icon-color: #444444;
   --icon-size: 26px;
+}
+.modal-container{
+  --modal-width:35%;
+  --key-word-color:#3e5879;
+  --icon-color: #444444;
+  --text-grey-color: #b4b4b8;
+}
+.post-card{
+  --post-card-width:70%;
+  --post-card-title:1em;
 }
 
 .content-part {
@@ -40,7 +52,7 @@ body {
   --post-border-light:#e2e2e5;
   --post-border-dark:transparent;
   --post-description-light: #333333;
-  --post-description-dark: #e2e2e5;
+  --post-description-dark: #c8c8c8d1;
   --bg-code-box-light:#e2e2e5;
   --bg-code-box-dark:#333333;
 }
@@ -59,6 +71,7 @@ body {
   --post-border:var(--post-border-dark);
   --post-description: var(--post-description-dark);
   --bg-code-box: var(--bg-code-box-dark);
+  --bg-tag:var(--post-description-dark);
   .gsc-left-header{
     color: white;
   }
@@ -71,9 +84,7 @@ body {
   --post-border:var(--post-border-light);
   --post-description: var(--post-description-light);
   --bg-code-box: var(--bg-code-box-light);
-    /* .gsc-left-header{
-    color: bl;
-  } */
+  --bg-tag:var(--bg-block-color-light);
 }
 html,
 body {
@@ -82,6 +93,33 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+
+/* 适应手机端 */
+ @media only screen and (max-width: 767px) {
+  #__nuxt {
+    --sider-width: 10%;
+    width: 100%;
+    height: 100%;
+    --tab-card-height: 30px;
+    --base-raduis: 8px;
+    --icon-color: #444444;
+    --icon-size: 26px; 
+  }
+  .modal-container{
+    --modal-width: 70%;
+  }
+  header {
+  --title-font-size: 1.5em;
+  }
+  .post-card{
+    --post-card-width:88%;
+    --post-card-title:0.9em;
+  }
+  .post-toc-box{
+    display:none;
+  }
+
 }
 
 

@@ -40,6 +40,8 @@ watch(
 
 <style lang="scss" scoped>
 .tab-part {
+  overflow-x: scroll;
+  
   .active {
     background-color: var(--bg-block-color);
   }

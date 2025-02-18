@@ -53,17 +53,18 @@ onMounted(() => {
   firstId.value = mdFile.body.toc.links.length
     ? mdFile.body.toc.links[0].id
     : 0;
-
-  const observer = new IntersectionObserver(handleIntersect, {
-    root: document.querySelector('.list-wrapper'), // 监听的根元素
-    threshold: 0.2, // 触发回调的阈值
-  });
-
-  // 获取list-wrapper元素下所有的h2, h3标签
-  const headers = document.querySelectorAll('.list-wrapper > h1,h2,h3');
-  headers.forEach(header => {
-    observer.observe(header);
-  });
+  let windowWidth = document.documentElement.clientWidth;
+  if(windowWidth>=768){
+    const observer = new IntersectionObserver(handleIntersect, {
+      root: document.querySelector('.list-wrapper'), // 监听的根元素
+      threshold: 0.2, // 触发回调的阈值
+    });
+    // 获取list-wrapper元素下所有的h2, h3标签
+    const headers = document.querySelectorAll('.list-wrapper > h1,h2,h3');
+    headers.forEach(header => {
+      observer.observe(header);
+    });
+  }
 });
 // IntersectionObserver 回调函数
 const handleIntersect = entries => {
@@ -115,6 +116,11 @@ const scrollToSection = id => {
   align-items: center;
   width: 100%;
   height: 100%;
+}
+@media only screen and (max-width: 767px){
+  .title-box{
+    display: none;
+  }
 }
 
 .title-1 {

@@ -40,7 +40,8 @@ const handleTabChange = index => {
 
   .main-part {
     margin-bottom: 10px;
-    height: calc(100% - var(--tab-card-height) - 10px);
+    height: calc(100% - var(--tab-card-height) - 5px);
+    overflow: scroll;
   }
 }
 </style>
