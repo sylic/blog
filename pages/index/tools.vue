@@ -1,6 +1,6 @@
 <template>
   <div class="content-part post-body">
-    <ContentDoc path="tools" class="slide-enter-content" />
+    <ContentDoc path="tools"/>
   </div>
 </template>
 

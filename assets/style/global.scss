@@ -184,6 +184,13 @@ body {
     margin-top: 2px;
   }
 
+  li ::marker{
+      content: '•'; /* 使用原点符号 */
+      color: #000; /* 设置原点的颜色 */
+      font-size: 1em; /* 设置原点的大小 */
+      margin-right: 0.5em; /* 设置原点与文本之间的间距 */
+  }
+
   ul {
     list-style: disc; // 实心圆
 
