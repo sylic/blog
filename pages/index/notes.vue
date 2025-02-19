@@ -31,7 +31,7 @@ definePageMeta({
 <style lang="scss" scoped>
 .post-list {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 70px);
   position: relative;
 }
 </style>

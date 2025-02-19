@@ -24,7 +24,7 @@ header {
 }
 
 .content-part {
-  --pagenation-height: 40px;
+  --pagenation-height: 60px;
   --border-radius-base: 10px;
   --border-radius-base-8: 8px;
   --box-shadow: 0 0px 6px rgba(0, 0, 0, 0.2);

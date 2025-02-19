@@ -56,7 +56,6 @@ const goToPostDetail = () => {
   border-radius: var(--border-radius-base);
   margin: 16px 0 0 5px;
   transition: box-shadow 0.3s ease-in;
-
   .post-title {
     font-weight: bold;
     font-size: var(--post-card-title);

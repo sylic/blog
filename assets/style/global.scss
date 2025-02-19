@@ -82,19 +82,8 @@ body {
 
 .post-list {
   width: 100%;
-  height: 100%;
 }
 
-.dark-mode {
-  .post-card {
-    border: none;
-
-    .dark-white {
-      color: rgba(200, 200, 200, 0.82);
-      --tag-bg: none
-    }
-  }
-}
 
 
 .content-part {
