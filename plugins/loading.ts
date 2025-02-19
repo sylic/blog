@@ -11,7 +11,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     if (binding.value) {
       el.timer = setTimeout(() => {
         append(el);
-      },1000)
+      },800)
     }
   },
   updated(el: HTMLElement & { instance?: any, timer?: number }, binding: DirectiveBinding) {
@@ -19,7 +19,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       if (binding.value) {
           el.timer = window.setTimeout(() => {
             append(el);
-          }, 1000); // 延迟 1 秒显示 loading
+          }, 800); // 延迟 800ms 显示 loading
       } else {
           clearTimeout(el.timer);
           remove(el);

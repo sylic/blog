@@ -1,6 +1,8 @@
 <template>
-  <div class="post-list flex-col flex-center" v-loading="listLoading">
-    <post-card v-for="post in posts" :post="post" :key="post._id" />
+  <div class="flex-col flex-center post-list" v-loading="listLoading">
+    <div class="post-box">
+      <post-card v-for="post in posts" :post="post" :key="post._id" />
+    </div>
     <Pagenation filePath="notes" @handleChange="getPostList" />
   </div>
 </template>
@@ -8,7 +10,7 @@
 <script setup lang="ts">
 import { getPosts } from '@/utils/index';
 import Pagenation from '~/components/homePage/Pagenation.vue';
-const posts = ref();
+const posts = ref([]);
 const filePath = 'notes';
 const listLoading=ref(false);
 onMounted(() => {
@@ -16,6 +18,7 @@ onMounted(() => {
 });
 // 分页CB
 const getPostList = async (pageNo: number) => {
+  posts.value.length = 0;
   listLoading.value = true;
   posts.value = await getPosts(filePath, pageNo);
   listLoading.value = false;
@@ -29,9 +32,5 @@ definePageMeta({
 </script>
 
 <style lang="scss" scoped>
-.post-list {
-  width: 100%;
-  height: calc(100% - 70px);
-  position: relative;
-}
+
 </style>

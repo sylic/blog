@@ -85,8 +85,8 @@ const handlePageChange = index => {
   user-select: none;
   display: flex;
   align-items: center;
-  position: fixed;
-  bottom: 20px;
+  position: absolute;
+  bottom: 0px;
   background-color: var(--bg-color);
   .cell {
     padding: 0 10px;
