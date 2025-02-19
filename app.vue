@@ -3,6 +3,7 @@
     <header class="header-wrapper">
       <Header></Header>
     </header>
+    <NuxtLoadingIndicator color="#777" />
     <NuxtPage />
   </div>
 </template>

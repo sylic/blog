@@ -194,7 +194,7 @@ const showKeyWordsFileter = (post) => {
     color: var(--text-grey-color);
     .title{
       font-size: 1em;
-      font-weight: 500;
+      color: var(--text-color);
       .key-word{
         color: var(--key-word-color);
         padding-left: 2px;

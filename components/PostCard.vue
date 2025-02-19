@@ -54,8 +54,8 @@ const goToPostDetail = () => {
   border: 1px solid var(--post-border);
   padding: 16px;
   border-radius: var(--border-radius-base);
-  margin-top: 16px;
-  transition: box-shadow 0.3s ease;
+  margin: 16px 0 0 5px;
+  transition: box-shadow 0.3s ease-in;
 
   .post-title {
     font-weight: bold;

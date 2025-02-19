@@ -27,7 +27,7 @@ header {
   --pagenation-height: 40px;
   --border-radius-base: 10px;
   --border-radius-base-8: 8px;
-  --box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0px 6px rgba(0, 0, 0, 0.2);
   --box-shadow-hover: 0 0px 10px rgba(0, 0, 0, 0.15);
   --post-text-color: #3e5879; /* 文章内容颜色 */
   --grey-dark: #b4b4b8;

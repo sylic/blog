@@ -40,7 +40,12 @@ npm run dev
      |___Post
      |    |
      |____|___[...post.vue]
-
+|
+|
+|————plugins
+    |
+    |
+    |----loading.ts
 
 
 
@@ -76,6 +81,10 @@ npm run dev
 - [pages](https://nuxt.com.cn/docs/guide/directory-structure/pages)
 
     每一个文件，都代表一个路由地址，如index.vue --> /    post/a.vue --> post/a
+
+- plugins
+
+  用于写一些全局的插件、vue指令(定义指令的方式和vue有点区别)等等
 
 ### 其他
   1. 评论功能

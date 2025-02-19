@@ -84,6 +84,8 @@ const handlePageChange = index => {
   user-select: none;
   display: flex;
   margin-top: 20px;
+  position: absolute;
+  bottom: 10px;
   .cell {
     padding: 0 10px;
     height: 42px;
