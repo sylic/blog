@@ -40,6 +40,14 @@ const path = post.join('/'); // 对应content目录下文件的路径
 
 // 通过路径获取md文件
 const mdFile = await getPost(path);
+const description = ref(mdFile.title);
+// SEO 
+useHead({
+  title: mdFile.title,
+  meta: [
+    {name:'description',content:description }
+  ]
+})
 
 // 第一个标题的id
 const firstId = ref();
